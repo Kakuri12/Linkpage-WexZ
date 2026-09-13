@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>WexZ</title>
+    <meta
+      name="description"
+      content="A dark video-style profile page with social links and a single playable track."
+    />
+    <link rel="icon" href="assets/GORPCORE.jpg" />
+    <link rel="stylesheet" href="style.css?v=14" />
+  </head>
+  <body>
+    <main class="profile-page" data-playing="false">
+      <video
+        class="background-media"
+        autoplay
+        loop
+        muted
+        playsinline
+        preload="auto"
+        poster="assets/pinterest-background.jpg?v=1"
+        aria-hidden="true"
+      >
+        <source src="assets/pinterest-background.mp4?v=1" type="video/mp4" />
+      </video>
+      <audio class="audio" autoplay preload="auto" src="assets/ridgeclub biting bullets.mp3"></audio>
+
+      <div class="cursor-light" aria-hidden="true"></div>
+      <div class="video-dim" aria-hidden="true"></div>
+      <div class="dot-screen" aria-hidden="true"></div>
+      <div class="vignette" aria-hidden="true"></div>
+
+      <div class="ambient-lines" aria-hidden="true">
+        <span style="--i: 0"></span>
+        <span style="--i: 1"></span>
+        <span style="--i: 2"></span>
+        <span style="--i: 3"></span>
+        <span style="--i: 4"></span>
+        <span style="--i: 5"></span>
+      </div>
+
+      <div class="views" aria-label="Views">
+        <img class="view-icon" src="assets/eye.svg" alt="" />
+        <strong class="view-count" data-start="0">0</strong>
+      </div>
+
+      <section class="profile-stack" aria-label="WexZ link profile">
+        <div class="avatar-wrap">
+          <span class="avatar-glow" aria-hidden="true"></span>
+          <img class="avatar" src="assets/GORPCORE.jpg" alt="WexZ avatar" />
+        </div>
+
+        <h1 class="profile-name" data-text="WexZ">WexZ</h1>
+        <div class="presence-pill discord-presence" data-status="offline" aria-label="Discord status">
+          <img class="presence-avatar" src="assets/avatar.png" alt="" />
+          <div>
+            <strong class="presence-name">WexZ</strong>
+            <span class="presence-status">discord offline</span>
+          </div>
+          <i class="status-dot" aria-hidden="true"></i>
+        </div>
+
+        <nav class="social-row" aria-label="Links">
+          <a
+            href="https://wexz-studio.netlify.app/"
+            target="_blank"
+            rel="noreferrer"
+            title="Portfolio"
+            aria-label="Portfolio"
+          >
+            <img class="social-icon portfolio-icon" src="assets/portfolio.svg?v=2" alt="" />
+          </a>
+          <a
+            href="https://shora-hub.netlify.app/"
+            target="_blank"
+            rel="noreferrer"
+            title="Shora Hub"
+            aria-label="Shora Hub"
+          >
+            <img class="social-icon shora-icon" src="assets/shora-hub.png?v=2" alt="" />
+          </a>
+          <a
+            href="https://www.instagram.com/wex.ez_?stkn=MWk4MWx1dmNxNnhubQ%3D%3D&utm_source=qr"
+            target="_blank"
+            rel="noreferrer"
+            title="Instagram"
+            aria-label="Instagram"
+          >
+            <img class="social-icon instagram-icon" src="assets/instagram.svg?v=2" alt="" />
+          </a>
+          <a
+            href="https://www.roblox.com/users/8805621619/profile"
+            target="_blank"
+            rel="noreferrer"
+            title="Roblox"
+            aria-label="Roblox"
+          >
+            <img class="social-icon roblox-icon" src="assets/roblox.svg?v=3" alt="" />
+          </a>
+          <a
+            href="https://discord.gg/uwPVNvfWVF"
+            target="_blank"
+            rel="noreferrer"
+            title="Discord"
+            aria-label="Discord"
+          >
+            <img class="social-icon discord-icon" src="assets/discord.svg?v=2" alt="" />
+          </a>
+        </nav>
+
+        <div class="tab-actions" aria-label="Extra buttons">
+          <a class="long-tab" href="https://wexz.netlify.app/" target="_blank" rel="noopener noreferrer">
+            <span class="tab-mark" aria-hidden="true"></span>
+            <span>About</span>
+          </a>
+          <a class="long-tab" href="https://wexz.netlify.app/projects" target="_blank" rel="noopener noreferrer">
+            <span class="tab-mark" aria-hidden="true"></span>
+            <span>Projects</span>
+          </a>
+        </div>
+      </section>
+
+      <section class="mini-player" aria-label="Single song player">
+        <button class="album-button" type="button" data-action="toggle">
+          <img src="assets/do-i-clench-my-fists-cover.jpg" alt="Do I Clench My Fists? cover" />
+          <span class="album-state" aria-hidden="true">play</span>
+          <span class="sr-only">Play song</span>
+        </button>
+
+        <div class="track-info">
+          <strong> biting bullets </strong>
+          <span></span>
+        </div>
+
+        <span class="time-label elapsed">0:00</span>
+        <input
+          class="song-range"
+          aria-label="Song position"
+          type="range"
+          min="0"
+          max="100"
+          step="0.1"
+          value="0"
+        />
+        <span class="time-label duration">0:00</span>
+
+        <div class="player-actions">
+          <button type="button" data-action="restart" aria-label="Restart song">
+            <span class="control-icon prev-icon" aria-hidden="true"></span>
+          </button>
+          <button
+            class="main-toggle"
+            type="button"
+            data-action="toggle"
+            aria-label="Play song"
+          >
+            <span class="control-icon play-icon" aria-hidden="true"></span>
+          </button>
+          <button type="button" data-action="restart" aria-label="Replay song">
+            <span class="control-icon next-icon" aria-hidden="true"></span>
+          </button>
+        </div>
+
+        <div class="developer-credit">Developed by <strong class="developer-name" data-text="WexZ" aria-label="WexZ">WexZ</strong></div>
+      </section>
+    </main>
+
+    <script src="supabase-config.js"></script>
+    <script src="script.js?v=10"></script>
+  </body>
+</html>
